@@ -69,7 +69,8 @@ const endRow = [
   document.getElementById('9'), 
   document.getElementById('14'),
   document.getElementById('19'),
-  document.getElementById('24')
+  document.getElementById('24'),
+  document.getElementById('29')
 ];
 
 endRow.forEach(row => {
@@ -79,10 +80,10 @@ endRow.forEach(row => {
       inputs = Array.from(document.querySelectorAll('input[class="' + rowWord + rowNum + '"]'));
       console.log(rowNum);
       const nextRow = inputs[0];
-      if (nextRow) nextRow.focus();
       e.preventDefault();
       resetInputs();
       checkGuess();
+      if (nextRow) nextRow.focus();
     }
   });
 });
